@@ -6,8 +6,8 @@
 
 El repositorio está organizado por módulos independientes. Cada carpeta contiene el código fuente correspondiente junto con su propia documentación detallada:
 
-*   **[01-gestion-alumnos-structs](./01-Gestion-Alumnos-Structs):** Sistema de gestión académica que implementa estructuras (`struct`), validación estricta de datos por consola y modularización.
-*   **[02-agente-autonomo-manhattan](./02-Agente-Autonomo-Manhattan):** Simulación bidimensional de un agente robot que toma decisiones de ruta óptima utilizando la Distancia de Manhattan.
+*   **[01-Gestion-Alumnos-Structs](./01-Gestion-Alumnos-Structs):** Sistema de gestión académica que implementa estructuras (`struct`), validación estricta de datos por consola y modularización.
+*   **[02-Agente-Autonomo-Manhattan](./02-Agente-Autonomo-Manhattan):** Simulación bidimensional de un agente robot que toma decisiones de ruta óptima utilizando la Distancia de Manhattan.
 
 ## 🛠️ Tecnologías y Conceptos Clave
 
