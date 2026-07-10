@@ -1,4 +1,0 @@
-Nombre: a
-Edad: 12
-Altura: 12.00
-Peso: 12.00
