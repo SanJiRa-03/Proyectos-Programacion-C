@@ -17,15 +17,14 @@ int main()
 
     do
     {
-        printf("Introduzca el n˙mero de alumnos de la secciÛn:\n");
+        printf("Introduzca el n√∫mero de alumnos de la secci√≥n:\n");
         scanf("%d", &n);
         if (n <= 0 || n > 30)
         {
-            printf("Cantidad no v·lida (debe ser entre 1 y 30).\n");
+            printf("Cantidad no v√°lida (debe ser entre 1 y 30).\n");
         }
     } while (n <= 0 || n > 30);
 
-    // Ojo: en C los arrays empiezan en 0. Cambiado i=0 e i<n para evitar sustos
     for (int i = 0; i < n; i++)
     {
         printf("\n| ALUMNO |\n");
@@ -34,12 +33,11 @@ int main()
 
         do
         {
-            printf("Inserte el gÈnero del alumno (H o M):\n");
-            // El espacio antes de %c es clave para saltar los 'intro' del teclado
+            printf("Inserte el g√©nero del alumno (H o M):\n");
             scanf(" %c", &alumnos[i].genero);
             if (alumnos[i].genero != 'H' && alumnos[i].genero != 'M')
             {
-                printf("Inserte H o M para indicar el gÈnero (en may˙sculas).\n");
+                printf("Inserte H o M para indicar el g√©nero (en may√∫sculas).\n");
             }
         } while (alumnos[i].genero != 'H' && alumnos[i].genero != 'M');
 
@@ -49,27 +47,27 @@ int main()
             scanf("%d", &alumnos[i].edad);
             if (alumnos[i].edad < 18)
             {
-                printf("Edad no v·lida, el alumno debe ser mayor de edad.\n");
+                printf("Edad no v√°lida, el alumno debe ser mayor de edad.\n");
             }
         } while (alumnos[i].edad < 18);
 
         do
         {
-            printf("Inserte la nota en ¡lgebra [0,10]:\n");
+            printf("Inserte la nota en √Ålgebra [0,10]:\n");
             scanf("%f", &alumnos[i].nota_algebra);
             if (alumnos[i].nota_algebra < 0 || alumnos[i].nota_algebra > 10)
             {
-                printf("Nota no v·lida.\n");
+                printf("Nota no v√°lida.\n");
             }
         } while (alumnos[i].nota_algebra < 0 || alumnos[i].nota_algebra > 10);
 
         do
         {
-            printf("Inserte la nota en FilosofÌa [0,10]:\n");
+            printf("Inserte la nota en Filosof√≠a [0,10]:\n");
             scanf("%f", &alumnos[i].nota_filosofia);
             if (alumnos[i].nota_filosofia < 0 || alumnos[i].nota_filosofia > 10)
             {
-                printf("Nota no v·lida.\n");
+                printf("Nota no v√°lida.\n");
             }
         } while (alumnos[i].nota_filosofia < 0 || alumnos[i].nota_filosofia > 10);
 
@@ -79,22 +77,22 @@ int main()
             scanf("%f", &alumnos[i].nota_arte);
             if (alumnos[i].nota_arte < 0 || alumnos[i].nota_arte > 10)
             {
-                printf("Nota no v·lida.\n");
+                printf("Nota no v√°lida.\n");
             }
         } while (alumnos[i].nota_arte < 0 || alumnos[i].nota_arte > 10);
 
         do
         {
-            printf("Inserte la nota en BiologÌa [0,10]:\n");
+            printf("Inserte la nota en Biolog√≠a [0,10]:\n");
             scanf("%f", &alumnos[i].nota_biologia);
             if (alumnos[i].nota_biologia < 0 || alumnos[i].nota_biologia > 10)
             {
-                printf("Nota no v·lida.\n");
+                printf("Nota no v√°lida.\n");
             }
         } while (alumnos[i].nota_biologia < 0 || alumnos[i].nota_biologia > 10);
     }
 
-    printf("\n--- RESULTADOS DE LA SECCI”N ---\n");
+    printf("\n--- RESULTADOS DE LA SECCI√ìN ---\n");
     for (int i = 0; i < n; i++)
     {
         AnalisisSeccion(i, alumnos[i].genero, alumnos[i].edad, alumnos[i].nota_algebra,
@@ -108,12 +106,12 @@ int AnalisisSeccion(int i, char gen, int ed, float alg, float filo, float art, f
 {
     printf("-------------------------\n");
     printf("ID: %d\n", i + 1);
-    printf("GÈnero: %c\n", gen);
+    printf("G√©nero: %c\n", gen);
     printf("Edad: %d\n", ed);
-    printf("Nota en ¡lgebra: %.2f\n", alg);
-    printf("Nota en FilosofÌa: %.2f\n", filo);
+    printf("Nota en √Ålgebra: %.2f\n", alg);
+    printf("Nota en Filosof√≠a: %.2f\n", filo);
     printf("Nota en Arte: %.2f\n", art);
-    printf("Nota en BiologÌa: %.2f\n", biol);
+    printf("Nota en Biolog√≠a: %.2f\n", biol);
     printf("-------------------------\n");
 
     return 0;
